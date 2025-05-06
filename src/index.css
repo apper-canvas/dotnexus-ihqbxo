@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  body {
+    @apply font-sans leading-normal;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+  
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  .btn-outline {
+    @apply border border-surface-300 dark:border-surface-700 hover:bg-surface-100 dark:hover:bg-surface-800;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-surface-800 rounded-2xl shadow-card p-4 md:p-6;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .neu-light {
+    @apply shadow-neu-light;
+  }
+  
+  .neu-dark {
+    @apply shadow-neu-dark;
+  }
+}
+
+/* Game-specific styles */
+.dot {
+  @apply w-4 h-4 rounded-full bg-primary transition-all duration-300;
+}
+
+.dot-active {
+  @apply bg-primary-light scale-110;
+}
+
+.line {
+  @apply bg-surface-300 dark:bg-surface-700 transition-all duration-300;
+}
+
+.line-vertical {
+  @apply absolute w-1 bg-surface-300 dark:bg-surface-700 rounded-full;
+}
+
+.line-horizontal {
+  @apply absolute h-1 bg-surface-300 dark:bg-surface-700 rounded-full;
+}
+
+.line-claimed-player-1 {
+  @apply bg-primary;
+}
+
+.line-claimed-player-2 {
+  @apply bg-secondary;
+}
+
+.box-claimed-player-1 {
+  @apply bg-primary/20;
+}
+
+.box-claimed-player-2 {
+  @apply bg-secondary/20;
+}
+
+/* Responsive animation adjustments */
+@media (max-width: 640px) {
+  .scale-animation {
+    transform: scale(0.95);
+  }
+}
