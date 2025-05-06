@@ -1,35 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { toast } from 'react-toastify';
-import getIcon from '../utils/iconUtils';
-
-const MainFeature = ({ username }) => {
-  // Icons
-  const ReloadIcon = getIcon('RefreshCw');
-  const UserIcon = getIcon('User');
-  const User2Icon = getIcon('Users');
-  const BotIcon = getIcon('Bot');
-  const SettingsIcon = getIcon('Settings');
-  const ExpandIcon = getIcon('ArrowsMaximize');
-  const CheckIcon = getIcon('Check');
-  const GridIcon = getIcon('Grid3X3');
-  const TrophyIcon = getIcon('Trophy');
-  const RefreshCwIcon = getIcon('RefreshCw');
-  
-  // Game settings and state
-  const [gridSize, setGridSize] = useState(4); // Default 4x4 grid
-  const [gameMode, setGameMode] = useState('ai'); // 'ai' or 'local'
-  const [playerTurn, setPlayerTurn] = useState(1); // 1 or 2
-  const [gameStarted, setGameStarted] = useState(false);
-  const [aiThinking, setAiThinking] = useState(false);
-  const [scores, setScores] = useState({ player1: 0, player2: 0 });
-  const [settingsOpen, setSettingsOpen] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
-  
-  // Core game state
-  const [grid, setGrid] = useState([]);
-  const [horizontalLines, setHorizontalLines] = useState([]);
-  const [verticalLines, setVerticalLines] = useState([]);
+                  Player 2
+                  ? 'Player 2 Wins!'
+                    <UserIcon className="w-4 h-4 text-white" />
+                    Player 2
   const [boxes, setBoxes] = useState([]);
   
   // Initialize the game
